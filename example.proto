@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message ExampleMessage {
+  extensions 10000 to 20000;
+}
+
+message OtherMessage {
+  extend ExampleMessage {
+    optional bool this_should_be_unserializable = 10024;
+  }
+}
